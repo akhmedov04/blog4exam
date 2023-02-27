@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maqola</title>
+</head>
+<body>
+  {% for i in maqola %}
+  <form method="get"> {% csrf_token %}
+    <h1>{{i.sarlavha}}</h1>
+    <p>{{i.matn}}</p>
+  {% endfor %}
+  </form>
+    <hr>
+    <a href="/logout/">Logout</a>
+</body>
+</html>
